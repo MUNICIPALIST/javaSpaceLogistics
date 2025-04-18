@@ -1,0 +1,95 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Dependencies
+node_modules/
+/Front/node_modules
+/Front/dist
+/Front/build
+
+# Go binaries and build files
+/Back/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace file
+go.work
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local development files
+.eslintcache
+.npm
+.yarn
+.pnp.*
+*.pem
+.cache
+dist
+dist-ssr
+*.local
+
+# Testing
+coverage/
+/Front/coverage
+
+# Production build
+/Front/build
+/Front/dist
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+tmp/
+
+# System Files
+.DS_Store
+Thumbs.db
+*.bak
+*.backup
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Database
+*.sqlite
+*.db
+
+# Compiled output
+*.min.js
+*.min.css
+
+# Debug files
+debug/
+debug.test
+
+# Binary files
+bin/
+pkg/ 
+

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.space.common.dto","l":"CargoDTO"},{"p":"com.space.common.dto","l":"CargoStatus"}];updateSearchResults();

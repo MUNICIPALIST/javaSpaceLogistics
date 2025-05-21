@@ -1,0 +1,45 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'com.space'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '21'
+    withSourcesJar()
+    withJavadocJar()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+jar {
+    enabled = true
+    archiveClassifier = ''
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ['-Xlint:none']
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+}
+
+// Отключаем все Spring Boot задачи
+tasks.withType(org.springframework.boot.gradle.tasks.bundling.BootJar) {
+    enabled = false
+} 

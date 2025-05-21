@@ -1,10 +1,4 @@
-FROM eclipse-temurin:21-jdk-alpine as builder
-WORKDIR /app
-COPY . .
-RUN ./gradlew clean bootJar
-
-FROM eclipse-temurin:21-jre-alpine
-WORKDIR /app
-COPY --from=builder /app/build/libs/eureka-server.jar app.jar
-EXPOSE 8761
-ENTRYPOINT ["java", "-jar", "app.jar"] 
+FROM eclipse-temurin:21-jdk-alpine
+VOLUME /tmp
+COPY build/libs/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
